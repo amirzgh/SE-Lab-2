@@ -4,8 +4,8 @@ public class Main {
     }
 
     public static class Rectangle {
-        double width;
-        double height;
+        private double width;
+        private double height;
 
         public Rectangle(double width, double height) {
             this.width = width;
