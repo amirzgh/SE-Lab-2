@@ -70,4 +70,51 @@ class MainTest {
         Assertions.assertEquals(newHeight, actualHeight);
     }
 
+    @Test
+    public void testCreateSquare(){
+        double side = 4;
+        Main.Square square = new Main.Square(side);
+        Assertions.assertNotEquals(square,null);
+    }
+
+    @Test
+    public void testCalculateSquareArea(){
+        double side = 4;
+        Main.Square square = new Main.Square(side);
+        double expectedArea = 4 * side;
+        Assertions.assertEquals(expectedArea,square.calculateArea());
+    }
+
+    @Test
+    public void testSetSquareWidth(){
+        double firstSide = 4;
+        Main.Square square = new Main.Square(firstSide);
+        double secondSide = 6;
+        square.setWidth(secondSide);
+        Assertions.assertEquals(secondSide,square.getWidth());
+    }
+
+    @Test
+    public void TestWidthAndHeightAreEqual(){
+        double side = 4;
+        Main.Square square = new Main.Square(side);
+        Assertions.assertEquals(square.getHeight(),square.getWidth());
+    }
+
+    @Test
+    public void TestWidthAndHeightAfterSetSide(){
+        double side = 4;
+        Main.Square square = new Main.Square(side);
+        double secondSide = 6;
+        square.setSide(secondSide);
+        Assertions.assertEquals(square.getHeight(),square.getWidth());
+    }
+
+    @Test
+    public void TestGetSide(){
+        double side = 4;
+        Main.Square square = new Main.Square(side);
+        Assertions.assertEquals(side,square.getSide());
+    }
+
 }
