@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
+        System.out.println("Hello My old, but not loved friend, Java (: ");
+
+        Square square = new Square(5);
+        System.out.println(square.calculateArea());
     }
 
     public static class Rectangle {
@@ -31,5 +34,24 @@ public class Main {
         public void setHeight(double height) {
             this.height = height;
         }
+    }
+
+    public static class Square extends Rectangle {
+        private double side;
+
+        public Square(double side) {
+            super(side, side);
+            this.side = side;
+        }
+        public double getSide() {
+            return side;
+        }
+
+        public void setSide(double side) {
+            this.side = side;
+            setWidth(side);
+            setHeight(side);
+        }
+
     }
 }
