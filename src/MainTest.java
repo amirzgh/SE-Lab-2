@@ -81,7 +81,7 @@ class MainTest {
     public void testCalculateSquareArea(){
         double side = 4;
         Main.Square square = new Main.Square(side);
-        double expectedArea = 4 * side;
+        double expectedArea = side * side;
         Assertions.assertEquals(expectedArea,square.calculateArea());
     }
 
