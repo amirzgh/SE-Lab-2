@@ -1,8 +1,6 @@
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 class MainTest {
 
     @Test
@@ -68,9 +66,8 @@ class MainTest {
         Main.Rectangle rectangle = new Main.Rectangle(6, 10);
         double newHeight = 12;
         rectangle.setHeight(newHeight);
-        double expectedHeight = newHeight;
         double actualHeight = rectangle.getHeight();
-        Assertions.assertEquals(expectedHeight, actualHeight);
+        Assertions.assertEquals(newHeight, actualHeight);
     }
 
 }
