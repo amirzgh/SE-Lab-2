@@ -102,19 +102,21 @@ class MainTest {
     }
 
     @Test
-    public void TestWidthAndHeightAfterSetSide(){
+    public void TestWidthAndHeightAfterChangeHeight(){
         double side = 4;
         Main.Square square = new Main.Square(side);
         double secondSide = 6;
-        square.setSide(secondSide);
+        square.setHeight(secondSide);
         Assertions.assertEquals(square.getHeight(),square.getWidth());
     }
 
     @Test
-    public void TestGetSide(){
+    public void TestWidthAndHeightAfterChangeWidth(){
         double side = 4;
         Main.Square square = new Main.Square(side);
-        Assertions.assertEquals(side,square.getSide());
+        double secondSide = 6;
+        square.setWidth(secondSide);
+        Assertions.assertEquals(square.getWidth(),square.getHeight());
     }
 
 }
